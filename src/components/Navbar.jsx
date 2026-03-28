@@ -1,10 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { navItems } from "../data/siteContent";
+import { useLanguage } from "../context/LanguageContext";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   return (
     <motion.header
@@ -15,16 +16,16 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#111] text-[11px] font-bold tracking-[0.16em] text-white">
-            KSIJ
+            {t.brand.logo}
           </span>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#111]">KS International Japan</p>
-            <p className="text-xs uppercase tracking-[0.22em] text-[#74747d]">Cyber Security</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#111]">{t.brand.name}</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-[#74747d]">{t.brand.subtitle}</p>
           </div>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
-          {navItems.map((item) => (
+          {t.navItems.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
@@ -40,11 +41,18 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setLang(lang === "jp" ? "en" : "jp")}
+            className="hidden rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold text-[#111] transition hover:bg-[#f4f4f5] md:inline-flex"
+          >
+            {t.common.languageButton}
+          </button>
           <Link
             to="/contact"
             className="hidden rounded-full bg-[#d90429] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#b20322] md:inline-flex"
           >
-            Book Training
+            {t.common.topCta}
           </Link>
           <button
             type="button"
@@ -66,7 +74,14 @@ function Navbar() {
             className="border-t border-black/10 bg-white lg:hidden"
           >
             <div className="mx-auto grid max-w-7xl gap-2 px-4 py-4 sm:px-6">
-              {navItems.map((item) => (
+              <button
+                type="button"
+                onClick={() => setLang(lang === "jp" ? "en" : "jp")}
+                className="rounded-2xl border border-black/10 bg-[#f6f6f7] px-4 py-3 text-left text-sm font-semibold text-[#222]"
+              >
+                {t.common.languageButton}
+              </button>
+              {t.navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
@@ -85,7 +100,7 @@ function Navbar() {
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-2xl bg-[#d90429] px-4 py-3 text-center text-sm font-semibold text-white"
               >
-                Contact Us
+                {t.common.contactUs}
               </Link>
             </div>
           </motion.div>
