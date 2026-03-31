@@ -208,6 +208,20 @@ export const translations = {
       foundersTitle: "Our Founders & Instructors",
       foundersDescription:
         "経験豊富なサイバーセキュリティ専門家が、実務と教育の両面から価値提供を行っています。",
+      locationEyebrow: "Company Location",
+      locationTitle: "会社所在地",
+      locationDescription: "日本拠点の所在地および会社連絡先をご案内いたします。",
+      locationCardTitle: "KS INTERNATIONAL",
+      locationCardSubtitle: "Cyber Security & IT Services Company（サイバーセキュリティ）",
+      location: {
+        website: "www.ksinternationaljapan.com",
+        email: "info@ksinternationaljapan.com",
+        phonePrimary: "+81-044-948-5998",
+        phoneSecondary: "+81-80-4168-4443",
+        phoneTertiary: "+81-70-5517-0786",
+        postal: "〒216-0024 神奈川県川崎市宮前区南平台3-30 3F",
+        addressEn: "3-30 3F, Nanpeidai, Miyamae-ku, Kawasaki City, Kanagawa Prefecture, Japan",
+      },
       founders: [
         {
           name: "Mahesh Kumar Meena",
@@ -500,6 +514,20 @@ export const translations = {
       foundersTitle: "Our Founders & Instructors",
       foundersDescription:
         "Experienced cybersecurity professionals leading the mission through practical delivery and education.",
+      locationEyebrow: "Company Location",
+      locationTitle: "Company Location",
+      locationDescription: "Our Japan office and primary business contact information.",
+      locationCardTitle: "KS INTERNATIONAL",
+      locationCardSubtitle: "Cyber Security & IT Services Company",
+      location: {
+        website: "www.ksinternationaljapan.com",
+        email: "info@ksinternationaljapan.com",
+        phonePrimary: "+81-044-948-5998",
+        phoneSecondary: "+81-80-4168-4443",
+        phoneTertiary: "+81-70-5517-0786",
+        postal: "216-0024, 3-30 3F, Nanpeidai, Miyamae-ku, Kawasaki City, Kanagawa Prefecture, Japan",
+        addressEn: "3-30 3F, Nanpeidai, Miyamae-ku, Kawasaki City, Kanagawa Prefecture, Japan",
+      },
       founders: [
         { name: "Mahesh Kumar Meena", role: "Founder & Lead Security Architect", jp: "Expert in cybersecurity and enterprise-grade defense systems", points: ["Leads security strategy and SOC architecture for large organizations", "Experience delivering national and corporate-level cyber defense training", "Focused on real-world defense, monitoring, and incident response"] },
         { name: "Rupankar Raj (Raj Thakur)", role: "Founder & Cybersecurity Educator", jp: "Hands-on cybersecurity educator focused on practical learning", points: ["Specializes in ethical hacking, threat analysis, and practical labs", "Trained thousands of students and professionals globally", "Known for clear teaching from beginner to advanced level", "Focused on hands-on learning that translates into real security skills"] },

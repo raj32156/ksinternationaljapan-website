@@ -72,6 +72,27 @@ function AboutPage() {
         </div>
       </section>
 
+      <section className="section-shell bg-[#f4f4f5]">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <SectionHeading eyebrow={t.about.locationEyebrow} title={t.about.locationTitle} description={t.about.locationDescription} />
+          <Card className="bg-white text-[#111111]">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-red-600">{t.about.locationCardTitle}</p>
+            <h3 className="mt-4 text-2xl font-semibold text-[#111111]">{t.about.locationCardSubtitle}</h3>
+            <div className="mt-8 grid gap-4 text-sm leading-7 text-[#334155]">
+              <p>📞 {t.about.location.phonePrimary}</p>
+              <p>{t.about.location.phoneSecondary}</p>
+              <p>{t.about.location.phoneTertiary}</p>
+              <p>🌐 {t.about.location.website}</p>
+              <p>✉️ {t.about.location.email}</p>
+              <div className="rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-4">
+                <p>{t.about.location.postal}</p>
+                <p className="mt-2">{t.about.location.addressEn}</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       <section className="section-shell bg-[#0d0d0f] text-white">
         <SectionHeading eyebrow={t.about.foundersEyebrow} title={t.about.foundersTitle} description={t.about.foundersDescription} tone="light" />
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
