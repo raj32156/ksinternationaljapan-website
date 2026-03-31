@@ -40,25 +40,29 @@ function ContactPage() {
           </Card>
 
           <Card className="bg-white text-[#111111]">
-            <form className="grid gap-4">
+            <form
+              className="grid gap-4"
+              action="https://formspree.io/f/mwvwbpkd"
+              method="POST"
+            >
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="grid gap-2 text-sm font-medium text-[#232328]">
                   {t.contact.form.name}
-                  <input className="form-input" type="text" placeholder={t.contact.form.placeholders.name} />
+                  <input className="form-input" type="text" name="name" placeholder={t.contact.form.placeholders.name} />
                 </label>
                 <label className="grid gap-2 text-sm font-medium text-[#232328]">
                   {t.contact.form.email}
-                  <input className="form-input" type="email" placeholder={t.contact.form.placeholders.email} />
+                  <input className="form-input" type="email" name="email" placeholder={t.contact.form.placeholders.email} />
                 </label>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="grid gap-2 text-sm font-medium text-[#232328]">
                   {t.contact.form.phone}
-                  <input className="form-input" type="text" placeholder={t.contact.form.placeholders.phone} />
+                  <input className="form-input" type="text" name="phone" placeholder={t.contact.form.placeholders.phone} />
                 </label>
                 <label className="grid gap-2 text-sm font-medium text-[#232328]">
                   {t.contact.form.interest}
-                  <select className="form-input" defaultValue={t.contact.form.options[0]}>
+                  <select className="form-input" name="service" defaultValue={t.contact.form.options[0]}>
                     {t.contact.form.options.map((option) => (
                       <option key={option}>{option}</option>
                     ))}
@@ -67,10 +71,15 @@ function ContactPage() {
               </div>
               <label className="grid gap-2 text-sm font-medium text-[#232328]">
                 {t.contact.form.message}
-                <textarea className="form-input min-h-36 resize-y" placeholder={t.contact.form.placeholders.message} />
+                <textarea
+                  className="form-input min-h-36 resize-y"
+                  name="message"
+                  placeholder={t.contact.form.placeholders.message}
+                />
               </label>
+              <input type="hidden" name="_subject" value="New inquiry from KS International Japan website" />
               <div className="pt-2">
-                <Button type="button" className="shadow-[0_18px_35px_rgba(217,4,41,0.24)]">
+                <Button type="submit" className="shadow-[0_18px_35px_rgba(217,4,41,0.24)]">
                   {t.common.sendInquiry}
                 </Button>
               </div>
