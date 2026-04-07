@@ -4,7 +4,7 @@ export const navItems = [
   { label: "Services", path: "/services" },
   { label: "Programs", path: "/programs" },
   { label: "Case Studies", path: "/stories" },
-  { label: "Blog", path: "/blog" },
+  { label: "Pricing", path: "/pricing" },
   { label: "Contact", path: "/contact" },
 ];
 

@@ -11,7 +11,7 @@ export const translations = {
       { label: "サービス内容", path: "/services" },
       { label: "プログラム", path: "/programs" },
       { label: "導入事例", path: "/stories" },
-      { label: "ブログ", path: "/blog" },
+      { label: "料金", path: "/pricing" },
       { label: "お問い合わせ", path: "/contact" },
     ],
     common: {
@@ -341,7 +341,7 @@ export const translations = {
       { label: "Services", path: "/services" },
       { label: "Programs", path: "/programs" },
       { label: "Case Studies", path: "/stories" },
-      { label: "Blog", path: "/blog" },
+      { label: "Pricing", path: "/pricing" },
       { label: "Contact", path: "/contact" },
     ],
     common: {
