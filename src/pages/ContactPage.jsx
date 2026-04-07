@@ -29,6 +29,17 @@ function ContactPage() {
             <div className="mt-8 space-y-5 text-sm leading-7 text-[#232328]">
               <p>Email: info@ksinternationaljapan.com</p>
               <p>Phone (Japan): +81 804 168 4443</p>
+              <p className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-lg leading-none">📷</span>
+                <a
+                  href="https://www.instagram.com/ksinternationaljapan?igsh=MWxpMWRuM3l4b3EzZg%3D%3D&utm_source=qr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-[#111111] underline-offset-4 transition hover:text-[#d90429] hover:underline"
+                >
+                  Instagram
+                </a>
+              </p>
               <p>{t.contact.officeLabel}: Tokyo, Japan</p>
               <p>{t.contact.hoursLabel}: Mon-Fri 9:00 AM - 6:00 PM JST</p>
             </div>
